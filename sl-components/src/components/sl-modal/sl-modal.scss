@@ -1,0 +1,73 @@
+@use "@mapsindoors/midt/padding";
+@use "@mapsindoors/midt/background-color";
+@use "@mapsindoors/midt/color";
+@use "@mapsindoors/midt/border";
+@use "@mapsindoors/midt/transitions";
+@use "@mapsindoors/midt/font";
+
+@use "@mapsindoors/midt/build/scss/variables";
+
+:host {
+    position: fixed;
+    width: 600px;
+    max-width: calc(100vw - 32px);
+    overflow: hidden;
+    @include font.family(sans-serif);
+    @include border.radius(large);
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+    &::before {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: rgba($color: black, $alpha: .6);
+        z-index: -1;
+    }
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(variables.$color-gray-80, variables.$color-gray-90);
+
+    @include padding.vertical(small);
+    @include padding.left(large);
+    @include padding.right(medium);
+    @include color.white(base);
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include padding.right(large);
+        @include color.white(base);
+        @include font.size(x-large);
+        @include font.weight(medium);
+    }
+
+    button {
+        @include padding.all(small);
+        border: none;
+        background: none;
+    }
+}
+
+.content {
+    @include padding.vertical(large);
+    @include padding.horizontal(x-large);
+    @include background-color.white();
+    @include font.size(medium);
+    @include font.weight(medium);
+    @include font.leading(x-large);
+}

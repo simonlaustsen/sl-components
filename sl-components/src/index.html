@@ -11,6 +11,27 @@
 </head>
 
 <body>
+  <sl-modal id="modal" open="true" header="Test header">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, eos provident. Delectus cum deserunt optio, error molestias illo voluptatem! Laboriosam numquam repellendus qui vero voluptatem nisi consectetur deserunt sit obcaecati.
+      Rerum mollitia aut error natus quis explicabo voluptate voluptas, quia a minima culpa nulla, tempora sunt est suscipit vero consequuntur aspernatur eum placeat beatae molestiae sapiente! Sint distinctio impedit optio.
+      Sit iste soluta possimus facilis. Voluptatum, sit ipsum culpa dolorem qui a voluptate, fugit fugiat molestias repellat natus nulla? A eligendi esse rem harum ipsam, at iusto minima ab quia?</p>
+  </sl-modal>
+
+  <button id="open-modal">Open Modal</button>
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae eos deleniti in voluptate tenetur officia ut nesciunt. Harum nam quas minima quae fugiat adipisci eius deleniti, ut nisi earum soluta.
+    Omnis eligendi ea sed, magni quae recusandae assumenda cupiditate velit architecto eveniet sapiente eos odit nihil maxime provident? Cumque soluta esse neque porro deserunt ex veritatis repudiandae dolor nisi sequi.
+    Pariatur recusandae porro eius illum aliquam delectus possimus quae tenetur necessitatibus. Doloremque omnis iste tempore repellendus voluptas atque qui et, nemo, perferendis ex maiores dolorem excepturi expedita velit eveniet praesentium!
+    Modi deleniti corporis dolore fugit eos dolores esse amet, maxime voluptatum officia quibusdam nostrum, mollitia odio iste sapiente suscipit vero perspiciatis eius, adipisci quasi molestias. Incidunt commodi enim rerum quam!</p>
+
+
+  <script>
+    const open = document.getElementById('open-modal');
+    open.onclick = () => modal.open = true;
+
+    // const modal = document.getElementById('modal');
+    // modal.addEventListener('click', () => modal.open = false);
+  </script>
 </body>
 
 </html>
